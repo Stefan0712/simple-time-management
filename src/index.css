@@ -1,13 +1,96 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Average Sans", sans-serif;
+  }
+  .app-content{
+    display: flex;
+  }
+  .App{
+    background-color: #080808;
+    height: 100vh;
+    width: 100vw;
+  }
+  .page-container{
+    background-color: #101212;
+    height: 100vh;
+    width: 85vw;
+    color: white;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  /************/
+  /****MENU****/
+  /************/
+  .menu{
+    height: 100vh;
+    width: 15vw;
+    background-color: #1c1e21;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+    padding-top: 10px;
+  }
+  .menu h2{
+    width: 90%;
+  }
+  .menu-links{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: auto;
+    align-items: center;
+  }
+  .menu a{
+    color: rgba(255, 255, 255, 0.719);
+    text-decoration: none;
+    width: 90%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+  }
+  .menu-icon{
+    height: 15px;
+    width: 15px;
+  }
+  .menu-line{
+    width: 90%;
+    align-self: center;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+  }
+  .selected-menu-button{
+    background-color: white;
+  }
+  .selected-menu-button .menu-icon{
+    filter: invert(1)
+  }
+  .selected-menu-button p{
+    color: black;
+  }
+
+
+  /**************/
+  /****COMMON****/
+  /**************/
+
+  .page{
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .small-icon{
+    height: 15px;
+    width: 15px;
+  }
