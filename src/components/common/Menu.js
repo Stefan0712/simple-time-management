@@ -61,6 +61,29 @@ const Menu = () => {
                     <img src={Icons.ProjectLight} className="menu-icon" alt="" />
                     <p>Projects</p>
                 </Link>
+                <div className="menu-projects-list">
+                    <Link 
+                        to={'/project/1/view'} 
+                        className={`menu-link ${selectedPage === '1' ? 'selected-menu-button' : ''}`} 
+                        onClick={() => setSelectedPage('1')}
+                    >
+                        <p>Fitness App</p>
+                    </Link>
+                    <Link 
+                        to={'/project/2/view'} 
+                        className={`menu-link ${selectedPage === '2' ? 'selected-menu-button' : ''}`} 
+                        onClick={() => setSelectedPage('2')}
+                    >
+                        <p>Time Management App</p>
+                    </Link>
+                    <Link 
+                        to={'/project/3/view'} 
+                        className={`menu-link ${selectedPage === '3' ? 'selected-menu-button' : ''}`} 
+                        onClick={() => setSelectedPage('3')}
+                    >
+                        <p>Portfolio</p>
+                    </Link>
+                </div>
             </div>
             <div className="menu-line"></div>
             <Link 

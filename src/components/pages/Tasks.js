@@ -1,7 +1,12 @@
+import Task from "../common/Task/Task";
+
+
+
+
 const Tasks = () => {
     return ( 
         <div className="tasks-page page">
-            <h1>Tasks</h1>
+            tasks
         </div>
      );
 }

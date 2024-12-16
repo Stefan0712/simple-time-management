@@ -17,6 +17,7 @@
     height: 100vh;
     width: 85vw;
     color: white;
+    overflow-y: auto;
   }
 
   /************/
@@ -48,7 +49,7 @@
   .menu a{
     color: rgba(255, 255, 255, 0.719);
     text-decoration: none;
-    width: 90%;
+    width: 100%;
     height: 35px;
     display: flex;
     align-items: center;
@@ -58,6 +59,15 @@
     align-items: center;
     gap: 10px;
     border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .menu-projects-list{
+    width: 90%;
+  }
+  .menu-projects-list a{
+    font-size: 0.9rem;
+    width: 100%;
   }
   .menu-icon{
     height: 15px;
@@ -93,4 +103,7 @@
   .small-icon{
     height: 15px;
     width: 15px;
+  }
+  .full-width{
+    width: 100%;
   }

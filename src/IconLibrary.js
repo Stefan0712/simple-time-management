@@ -39,6 +39,8 @@ import TimerDark from './assets/icons/timer-dark.svg';
 import TimerLight from './assets/icons/timer-light.svg';
 import PersonDark from './assets/icons/person-light.svg';
 import PersonLight from './assets/icons/person-light.svg';
+import DotsMenuLight from './assets/icons/dots-menu-light.svg';
+import DotsMenuDark from './assets/icons/dots-menu-dark.svg';
 
 const Icons = {
   AddCalendarDark,
@@ -81,7 +83,9 @@ const Icons = {
   TimerDark,
   TimerLight,
   PersonDark,
-  PersonLight
+  PersonLight,
+  DotsMenuLight,
+  DotsMenuDark
 };
 
 export default Icons;
