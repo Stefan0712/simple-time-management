@@ -1,6 +1,7 @@
 
 .note-body{
     width: calc(20% - 15px);
+    min-width: 225px;
     height: 150px;
     background-color: #101212;
     border-radius: 5px;

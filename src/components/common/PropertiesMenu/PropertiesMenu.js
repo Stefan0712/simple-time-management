@@ -14,6 +14,17 @@ const PropertiesMenu = ({properties, closeProperties, type}) => {
                 <p className='property'>Created at {properties.createdAt}</p>
                 <p className='property'>Priority: {properties.priority}</p>
                 <p className='property'>Progress: {properties.progress}%</p>
+                <div className="subtasks">
+                    <b>Subtasks</b>
+                    <div className="subtasks-container">
+                        {properties.subtasks?.map((subtask)=>(
+                            <div className="short-task">
+                                <p>{subtask.name}</p>
+                                <input type="checkbox" checked={subtask.isCompleted}></input>
+                            </div>
+                        ))}
+                    </div>
+                </div>
                 <div className='property-tags'>
                     <img className='small-icon' src={Icons.TagLight} alt=''></img>
                     {properties.tags?.map((tag,index)=>(

@@ -41,13 +41,13 @@
     height: 100%;
     background-color: #1c1e21;
     border-radius: 5px;
+    
 }
 .container-header{
     height: 40px;
     display: flex;
     align-items: center;
     border-bottom:1px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 10px;
     justify-content: space-between;
     padding: 0 15px;
 }
@@ -93,6 +93,20 @@
     overflow-y: auto;
     overflow-x: hidden;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     padding: 10px;
+}
+
+.short-task{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.small-container .tasks-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
 }

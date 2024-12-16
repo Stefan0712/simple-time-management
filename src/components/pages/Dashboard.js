@@ -20,7 +20,26 @@ const Dashboard = () => {
         console.log(propertyMenu)
         setPropertyMenu(<PropertiesMenu properties={properties} type={type} closeProperties={closeProperties} />);
     }
-    console.log(propertyMenu)
+    const mockShortTasks = (
+        <div className="tasks-container">
+            <div className='short-task'>
+                <p className='title'>Take out the trash</p>    
+                <input type='checkbox'></input>
+            </div>             
+            <div className='short-task'>
+                <p className='title'>Respond to mail</p>    
+                <input type='checkbox'></input>
+            </div>             
+            <div className='short-task'>
+                <p className='title'>Merge feature</p>    
+                <input type='checkbox'></input>
+            </div>             
+            <div className='short-task'>
+                <p className='title'>Check feedback</p>    
+                <input type='checkbox'></input>
+            </div>             
+        </div>
+    )
 
     return ( 
         <div className="dashboard-page page">
@@ -30,27 +49,19 @@ const Dashboard = () => {
                 <div className="dashboard-quick-tasks">
                     <div className="small-container">
                         <div className='container-header'><p>Today</p></div>
-                        <div className="tasks-container">
-                            
-                        </div>
+                        {mockShortTasks}
                     </div>
                     <div className="small-container">
                         <div className='container-header'><p>This Week</p></div>
-                        <div className="tasks-container">
-
-                        </div>
+                        {mockShortTasks}
                     </div>
                     <div className="small-container">
                         <div className='container-header'><p>Pinned</p></div>
-                        <div className="tasks-container">
-
-                        </div>
+                        {mockShortTasks}
                     </div>
                     <div className="small-container">
                         <div className='container-header'><p>Due Tasks</p></div>
-                        <div className="tasks-container">
-
-                        </div>
+                        {mockShortTasks}
                     </div>
                 </div>
                 <div className="half-width-container">
