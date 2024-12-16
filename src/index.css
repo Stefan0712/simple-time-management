@@ -17,6 +17,15 @@
     overflow: hidden;
     position: relative;
   }
+  
+  *::-webkit-scrollbar-thumb{
+    background-color: white;
+    width: 5px;
+  }
+  *::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+  }
   .page-container{
     background-color: #101212;
     height: 100vh;

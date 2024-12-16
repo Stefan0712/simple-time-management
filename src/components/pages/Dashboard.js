@@ -66,14 +66,31 @@ const Dashboard = () => {
                 </div>
                 <div className="half-width-container">
                     <div className='container-header'><p>Recent Activity</p></div>
-                    <div className="tasks-container">
-
+                    <div className="activity-container">
+                        <p className='activity'><b>Added new task</b> in <b>Project 1</b> at <b>12:00</b> on <b>02.05.2024</b></p>
+                        <p className='activity'><b>Added new task</b> in <b>Project 1</b> at <b>12:00</b> on <b>02.05.2024</b></p>
+                        <p className='activity'><b>Added new task</b> in <b>Project 1</b> at <b>12:00</b> on <b>02.05.2024</b></p>
+                        <p className='activity'><b>Added new task</b> in <b>Project 1</b> at <b>12:00</b> on <b>02.05.2024</b></p>
                     </div>
                 </div>
                 <div className="half-width-container">
                     <div className='container-header'><p>Projects</p></div>
-                    <div className="tasks-container">
-
+                    <div className="projects-container">
+                        <div className='project'>
+                            <h4>Fitness App</h4>
+                            <p>38 tasks</p>
+                            <p>49% completion</p>
+                        </div>
+                        <div className='project'>
+                            <h4>Time management app</h4>
+                            <p>38 tasks</p>
+                            <p>49% completion</p>
+                        </div>
+                        <div className='project'>
+                            <h4>Portfolio</h4>
+                            <p>38 tasks</p>
+                            <p>49% completion</p>
+                        </div>
                     </div>
                 </div>
                 <div className="full-width-container">
