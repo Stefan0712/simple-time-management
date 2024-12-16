@@ -5,6 +5,12 @@
     align-items: center;
     padding: 0 10px;
     gap: 10px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.task-body:hover{
+    background-color: rgba(211, 211, 211, 0.1);
+    transition: all 0.1s;
 }
 .task-button{
     height: 40px; 
@@ -28,3 +34,7 @@
 .task-body .task-status{
     width: 15%;
 }
+
+
+
+

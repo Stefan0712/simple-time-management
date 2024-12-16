@@ -1,8 +1,8 @@
 
 .note-body{
-    width: 250px;
+    width: calc(20% - 15px);
     height: 150px;
-    background-color: #1c1e21;
+    background-color: #101212;
     border-radius: 5px;
     padding: 5px 10px;
     overflow: hidden;
@@ -37,25 +37,12 @@
 }
 .note-content{
     height: calc(100% - 30px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-.note-properties{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    width: 100%;
-    bottom: -100px;
-    left: 0;
-    transition: all 0.2s;
-    padding: 10px 5px;
-    background-color: #151618;
-    border-top: 1px solid rgba(0, 0, 0, 0.507);
-}
-.note-body:hover .note-properties{
-    bottom: 0;
-    gap: 5px;
-    transition: all 0.2s;
-}
+
+
 .note-tags{
     display: flex;
     align-items: center;

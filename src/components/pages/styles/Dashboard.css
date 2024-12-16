@@ -7,6 +7,8 @@
     flex-wrap: wrap;
     align-items: center;
     overflow-y: auto;
+    margin-bottom: 50px;
+    position: relative;
 }
 .dashboard-summary{
     width: 100%;
@@ -79,4 +81,18 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+}
+.full-width-container.notes{
+    height: 375px;
+}
+.notes-container{
+    height: calc(100% - 50px);
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
 }
