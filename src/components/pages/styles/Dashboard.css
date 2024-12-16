@@ -35,21 +35,33 @@
     align-items: center;
 }
 .dashboard-quick-tasks .small-container{
-    width: 24%;
-    height: 90%;
+    width: calc(25% - 10px);
+    height: 100%;
     background-color: #1c1e21;
     border-radius: 5px;
 }
 .container-header{
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
-    padding-left: 10px;
     border-bottom:1px solid rgba(255, 255, 255, 0.2);
     margin-bottom: 10px;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.header-button{
+    width: 150px;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #101212;
+    color: white;
+    text-decoration: none;
 }
 .half-width-container{
-    width: calc(50% - 10px);
+    width: calc(50% - 5px);
     height: 250px;
     background-color: #1c1e21;
     border-radius: 5px;
