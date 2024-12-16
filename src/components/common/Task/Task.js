@@ -1,20 +1,20 @@
 import Icons from '../../../IconLibrary';
+import './Task.css';
 
-const Tasks = ({taskData}) => {
+const Task = ({taskData}) => {
     return ( 
         <div className="task-body">
-            <div className="task-header">
-                <h3>Task Title</h3>
-                <p>This is a description</p>
-                <p>04.08.2025</p>
-                <p>Started</p>
-                <button><img src={Icons.DotsMenuLight} alt=""/></button>
-            </div>
+            <p className='task-title'>{taskData.name}</p>
+            <p className='task-description'>{taskData.description}</p>
+            <p className='task-due'>{taskData.dueDate}</p>
+            <p className='task-status'>{taskData.status}</p>
+            <button className='task-button'><img className='small-icon' src={Icons.DotsMenuLight} alt=""/></button>
+            {/* TODO: Change menu button to checkbox */}
         </div>
      );
 }
  
-export default Tasks;
+export default Task;
 
 
 

@@ -1,0 +1,30 @@
+.task-body{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+}
+.task-button{
+    height: 40px; 
+    width: 40px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+.task-body .task-title{
+    width: 45%;
+    min-width: 300px;
+}
+.task-body .task-description{
+    width: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.task-body .task-due{
+    width: 10%
+}
+.task-body .task-status{
+    width: 15%;
+}

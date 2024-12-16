@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './styles/Dashboard.css'
-import tasks from '../../FakeTasks';
+import {tasks} from '../../FakeTasks';
+import Task from '../common/Task/Task';
 
 
 const Dashboard = () => {
@@ -53,7 +54,9 @@ const Dashboard = () => {
                         <Link to={'/tasks'} className='header-button'>All Tasks</Link>
                     </div>
                     <div className="tasks-container">
-
+                        {tasks.map((task)=>(
+                            <Task taskData={task}/>
+                        ))}
                     </div>
                 </div>
                 <div className="full-width-container">

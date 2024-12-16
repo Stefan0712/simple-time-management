@@ -71,4 +71,12 @@
     height: 250px;
     background-color: #1c1e21;
     border-radius: 5px;
+  
+}
+.full-width-container .tasks-container{
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
