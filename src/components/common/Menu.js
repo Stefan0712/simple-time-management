@@ -11,7 +11,24 @@ const Menu = () => {
     const [showNewNote, setShowNewNote] = useState(false);
     const [showNewProject, setShowNewProject] = useState(false);
 
+    const handleShowNewNote = () =>{
+            setShowNewTask(false);
+            setShowNewProject(false);
 
+            setShowNewNote(true);
+    }
+    const handleShowNewProject = () =>{
+            setShowNewTask(false);
+            setShowNewNote(false);
+
+            setShowNewProject(true);
+    }
+    const handleShowNewTask = () =>{
+            setShowNewNote(false);
+            setShowNewProject(false);
+
+            setShowNewTask(true);
+    }
     return ( 
         <div className="menu">
             <h2>Task App</h2>
@@ -91,8 +108,8 @@ const Menu = () => {
                 </div>
             </div>
             <div className="quick-menus">
-                <button onClick={()=>setShowNewTask(true)}>New Task</button>
-                <button onClick={()=>setShowNewNote(true)}>New Note</button>
+                <button onClick={handleShowNewTask}>New Task</button>
+                <button onClick={handleShowNewNote}>New Note</button>
             </div>
             <div className="menu-line"></div>
             <Link 
