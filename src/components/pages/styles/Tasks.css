@@ -1,0 +1,15 @@
+.tasks-page{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.project-container h3{
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
