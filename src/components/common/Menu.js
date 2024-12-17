@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import Icons from "../../IconLibrary";
 import { useState } from "react";
+import NewTask from "./NewTask/NewTask";
 
 const Menu = () => {
 
     const [selectedPage, setSelectedPage] = useState('dashboard');
+    const [showNewTask, setShowNewTask] = useState(false);
+    const [showNewNote, setShowNewNote] = useState(false);
+    const [showNewProject, setShowNewProject] = useState(false);
 
 
     return ( 
@@ -85,6 +89,10 @@ const Menu = () => {
                     </Link>
                 </div>
             </div>
+            <div className="quick-menus">
+                <button onClick={()=>setShowNewTask(true)}>New Task</button>
+                <button onClick={()=>setShowNewNote(true)}>New Note</button>
+            </div>
             <div className="menu-line"></div>
             <Link 
                 to={'/pomodoro'} 
@@ -102,6 +110,11 @@ const Menu = () => {
                 <img src={Icons.SettingsLight} className="menu-icon" alt="" />
                 <p>Settings</p>
             </Link>
+
+
+            {/* New Task, New Note, New Project menus */}
+            {showNewTask && <NewTask closeMenu={()=>setShowNewTask(false)}/>}
+            
     </div>
      );
 }
