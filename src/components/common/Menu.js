@@ -3,6 +3,7 @@ import Icons from "../../IconLibrary";
 import { useState } from "react";
 import NewTask from "./NewTask/NewTask";
 import NewNote from "./NewNote/NewNote";
+import { useAppContext } from "../../AppContext";
 
 const Menu = () => {
 
@@ -10,6 +11,8 @@ const Menu = () => {
     const [showNewTask, setShowNewTask] = useState(false);
     const [showNewNote, setShowNewNote] = useState(false);
     const [showNewProject, setShowNewProject] = useState(false);
+
+    const { propertyMenu, openProperties, closeProperties } = useAppContext();
 
     const handleShowNewNote = () =>{
             setShowNewTask(false);
@@ -133,6 +136,7 @@ const Menu = () => {
             {/* New Task, New Note, New Project menus */}
             {showNewTask && <NewTask closeMenu={()=>setShowNewTask(false)}/>}
             {showNewNote && <NewNote closeMenu={()=>setShowNewNote(false)}/>}
+            {propertyMenu ? propertyMenu : ''}
             
     </div>
      );

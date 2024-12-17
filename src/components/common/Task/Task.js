@@ -1,10 +1,12 @@
 import Icons from '../../../IconLibrary';
 import './Task.css';
+import { useAppContext } from '../../../AppContext';
 
 const Task = ({taskData, onClick}) => {
+    const { openProperties } = useAppContext();
 
     return ( 
-        <div className="task-body" key={taskData.id} onClick={onClick}>
+        <div className="task-body" key={taskData.id} onClick={onClick ? onClick : ()=>openProperties('task', taskData)}>
             <p className='task-title'>{taskData.name}</p>
             <p className='task-description'>{taskData.description}</p>
             <p className='task-due'>{taskData.dueDate}</p>

@@ -4,22 +4,13 @@ import {tasks} from '../../FakeTasks';
 import Task from '../common/Task/Task';
 import Note from '../common/Note/Note';
 import {notes} from '../../FakeNotes';
-import { useState } from 'react';
-import PropertiesMenu from '../common/PropertiesMenu/PropertiesMenu';
+import { useAppContext } from '../../AppContext';
 
 
 const Dashboard = () => {
 
-    const [propertyMenu, setPropertyMenu] = useState(null);
-
-    const closeProperties = () =>{
-        setPropertyMenu(null);
-    }
-    const openProperties = (type, properties) =>{
-        console.log(type, properties)
-        console.log(propertyMenu)
-        setPropertyMenu(<PropertiesMenu properties={properties} type={type} closeProperties={closeProperties} />);
-    }
+    const { openProperties, closeProperties } = useAppContext();
+    
     const mockShortTasks = (
         <div className="tasks-container">
             <div className='short-task'>
@@ -117,9 +108,8 @@ const Dashboard = () => {
                 </div>
             </div>
         
-        {/*Menus and modals that are not initially rendered or shown */}
 
-        {propertyMenu ? propertyMenu : ''}
+        
         </div>
      );
 }
