@@ -1,52 +1,29 @@
-import './NewTask.css';
+import './NewNote.css';
 import Icons from '../../../IconLibrary';
 
-const NewTask = ({closeMenu}) => {
+
+
+const showNewNote = ({closeMenu}) => {
     return ( 
-        <div className="new-task new-items-menu">
+        <div className="new-note new-items-menu">
             <img className='close-icon' src={Icons.CloseLight} onClick={closeMenu} alt='close extended task'/>
-            <p className='title'>New Task</p>
+            <p className='title'>New Note</p>
             <fieldset>
                 <label>Title</label>
                 <input type='text' name='title' id='title' required></input> 
             </fieldset>
             <fieldset>
-                <label>Description</label>
-                <input type='text' name='description' id='description'></input> 
+                <label>Content</label>
+                <textarea name='content' id='content'></textarea> 
             </fieldset>
             <fieldset>
-                <label>Due At</label>
-                <div className='due-inputs'>
-                    <input type='date' name='dueDate' id='dueDate'></input> 
-                    <input type='hour' name='dueHour' id='dueHour'></input> 
-                </div>
-            </fieldset>
-            <fieldset>
-                <label>Color</label>
-                <input type='color' name='color' id='color'></input> 
-            </fieldset>
-            <fieldset>
-                <label>Priority</label>
-                <select id='priority' name='priority'>
+                <label>Importance</label>
+                <select id='importance' name='importance'>
                     <option value={'very-low'}>Very Low</option>
                     <option value={'low'}>Low</option>
                     <option value={'normal'}>Normal</option>
                     <option value={'high'}>High</option>
                     <option value={'very-high'}>Very High</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <label>Status</label>
-                <select id='priority' name='priority'>
-                    <option value={'not-started'}>Not Started</option>
-                    <option value={'started'}>Started</option>
-                    <option value={'in-progress'}>In Progress</option>
-                    <option value={'reviewing'}>Reviewing</option>
-                    <option value={'finished'}>Finished</option>
-                    <option value={'dropped'}>Dropped</option>
-                    <option value={'paused'}>Paused</option>
-                    <option value={'revisioning'}>Revisioning</option>
-                    <option value={'testing'}>Testing</option>
                 </select>
             </fieldset>
             <fieldset>
@@ -82,22 +59,9 @@ const NewTask = ({closeMenu}) => {
                     </div>
                 </div>
             </fieldset>
-            <fieldset>
-                <label><b>Subtasks</b></label>
-                <div className='subtask-inputs'>
-                    <input type='text' id='name' name='name' placeholder='Subtask Name' required></input>
-                    <button><img src={Icons.PlusLight} alt=''></img></button>
-                </div>
-                <div className='subtask-container'>
-                    <div className='short-task'>
-                        <p>Task 1</p>
-                        <img src={Icons.CloseLight}></img>
-                    </div>
-                </div>
-            </fieldset>
             <button className='create-item-button'>Create Task</button>
         </div>
      );
 }
  
-export default NewTask;
+export default showNewNote;

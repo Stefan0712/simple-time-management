@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Icons from "../../IconLibrary";
 import { useState } from "react";
 import NewTask from "./NewTask/NewTask";
+import NewNote from "./NewNote/NewNote";
 
 const Menu = () => {
 
@@ -114,6 +115,7 @@ const Menu = () => {
 
             {/* New Task, New Note, New Project menus */}
             {showNewTask && <NewTask closeMenu={()=>setShowNewTask(false)}/>}
+            {showNewNote && <NewNote closeMenu={()=>setShowNewNote(false)}/>}
             
     </div>
      );

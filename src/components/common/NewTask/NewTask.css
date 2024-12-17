@@ -1,4 +1,4 @@
-.new-task{
+.new-items-menu{
     height: 100vh;
     position: absolute;
     display: flex;
@@ -34,11 +34,12 @@
     padding-top: 10px;
     margin: 10px 0;
 }
-.new-task-tags img{
+.new-items-menu img{
     height: 30px;
     width: 30px;
 }
-.tag-body{
+
+.new-items-menu .tag-body{
     padding: 0 10px;
     height: 30px;
     border-radius: 5px;
@@ -49,12 +50,12 @@
     color: black;
     gap: 5px;
 }
-.new-task .title{
+.new-items-menu .title{
     height: 30px;
     font-size: 1.5rem;
     font-weight: 600;
 }
-.new-task .close-icon{
+.new-items-menu .close-icon{
     height: 30px;
     width: 30px;
 }
@@ -65,7 +66,7 @@
     height: 30px;
     width: 30px;
 }
-.new-task fieldset{
+.new-items-menu fieldset{
     border:none;
     display: flex;
     flex-direction: column;
@@ -74,13 +75,17 @@
 .new-task #color{
     padding: 0;
 }
-.new-task input,
-.new-task select,
-.new-task option{
+.new-items-menu input,
+.new-items-menu select,
+.new-items-menu option,
+.new-items-menu textarea{
     height: 40px;
     border-radius: 5px;
     border: 1px solid transparent;
     padding-left: 10px;
+}
+.new-items-menu textarea{
+    height: 100px;
 }
 #dueDate{
     width: 60%;
@@ -100,23 +105,23 @@
     background-color: transparent;
     border: none;
 }
-.tags-input{
+.new-items-menu .tags-input{
     display: flex;
     align-items: center;
     gap: 15px;
     width: 100%;
     margin-bottom: 15px;
 }
-.tags-input .tag-color,
-.tags-container .tag-color{
+.new-items-menu .tags-input .tag-color,
+.new-items-menu .tags-container .tag-color{
     height: 25px;
     width: 25px;
     border: none;
 }
-.tags-input input{
+.new-items-menu .tags-input input{
     width: 70%;
 }
-.tags-container .tag-item{
+.new-items-menu .tags-container .tag-item{
     width: fit-content;
     display: flex;
     background-color: transparent;
@@ -126,16 +131,16 @@
     padding: 3px 10px;
     border-radius: 5px;
 }
-.new-task .subtask-inputs{
+.new-items-menu  .subtask-inputs{
     display: flex;
     align-items: center;
     gap: 15px;
     margin-top: 10px;
 }
-.new-task .subtask-inputs input{
+.new-items-menu  .subtask-inputs input{
     width: 70%;
 }
-.new-task .subtask-container{
+.new-items-menu  .subtask-container{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -145,7 +150,7 @@
 
 
 
-.create-item-button{
+.new-items-menu .create-item-button{
     width: 150px;
     height: 50px;
     min-height: 50px;
